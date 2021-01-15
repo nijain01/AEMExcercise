@@ -3,4 +3,4 @@
     jcr:description="Tag Picker Component for Apple Assignment"
     jcr:primaryType="cq:Component"
     jcr:title="Tag Picker"
-    componentGroup="Apple Assignment - Content"/>
+    componentGroup="AEMExcercise - Content"/>

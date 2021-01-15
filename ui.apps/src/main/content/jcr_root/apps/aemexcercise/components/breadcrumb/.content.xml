@@ -3,4 +3,4 @@
     jcr:description="Breadcrumb Component for Apple Assignment"
     jcr:primaryType="cq:Component"
     jcr:title="Breadcrumb"
-    componentGroup="Apple Assignment - Content"/>
+    componentGroup="AEMExcercise - Content"/>

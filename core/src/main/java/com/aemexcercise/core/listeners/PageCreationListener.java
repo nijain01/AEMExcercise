@@ -2,7 +2,7 @@ package com.aemexcercise.core.listeners;
 
 import com.aemexcercise.core.constants.MetadataConstants;
 import com.aemexcercise.core.properties.ListenerCustomMetadataProperty;
-import com.aemexcercise.core.utils.AppleUtils;
+import com.aemexcercise.core.utils.AppUtils;
 import com.day.cq.wcm.api.PageEvent;
 import com.day.cq.wcm.api.PageModification;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -48,7 +48,7 @@ public class PageCreationListener implements JobConsumer {
         ResourceResolver resourceResolver = null;
         Session session = null;
         try {
-            resourceResolver = AppleUtils.getServiceUserResourceResolver(resourceResolverFactory, MetadataConstants.METADATA_WRITER_SERVICE);
+            resourceResolver = AppUtils.getServiceUserResourceResolver(resourceResolverFactory, MetadataConstants.METADATA_WRITER_SERVICE);
 
             session = resourceResolver.adaptTo(Session.class);
 
@@ -83,7 +83,7 @@ public class PageCreationListener implements JobConsumer {
             if (session != null && session.isLive()) {
                 session.logout();
             }
-            AppleUtils.closeResourceResolver(resourceResolver);
+            AppUtils.closeResourceResolver(resourceResolver);
         }
         return JobResult.OK;
     }

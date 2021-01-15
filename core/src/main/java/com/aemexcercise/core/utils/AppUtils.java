@@ -13,11 +13,11 @@ import java.util.Map;
  * This class is Util class for repository specific changes
  */
 
-public class AppleUtils {
+public class AppUtils {
 
-    private static final Logger log = LoggerFactory.getLogger(AppleUtils.class);
+    private static final Logger log = LoggerFactory.getLogger(AppUtils.class);
 
-    private AppleUtils() {
+    private AppUtils() {
     }
 
     public static ResourceResolver getServiceUserResourceResolver(final ResourceResolverFactory resourceResolverFactory,
