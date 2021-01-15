@@ -1,0 +1,17 @@
+<div data-sly-use.taggedPageObj="com.aemexcercise.core.models.TaggedPageModel"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${properties.tags}">
+
+    <!--/*
+<p><h3>Total  tagged pages Count:</h3> ${taggedPageObj.taggedPageList.size}</p>
+<p><h3>Tags configured in component:</h3> ${properties.tags}</p>
+*/ -->
+<h2 data-sly-test="${taggedPageObj.taggedPageList.size==0}">No Tagged pages found.</h2>
+    <h2 data-sly-test="${taggedPageObj.taggedPageList.size>0}">Tagged pages:</h2>
+    <div
+     data-sly-list.taggedPages = "${taggedPageObj.taggedPageList}">
+        <div><a href="${taggedPages.path}.html" target="_blank"> ${taggedPages.title}</a></div>
+    </div>
+</div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>

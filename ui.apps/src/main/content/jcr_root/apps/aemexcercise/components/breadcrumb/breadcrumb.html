@@ -1,0 +1,12 @@
+<div data-sly-use.breadcrumbObj="com.aemexcercise.core.models.BreadcrumbModel"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-test="${breadcrumbObj.breadcrumb.breadcrumbList.size > 0}">
+
+<div
+     data-sly-list.breadcrumb = "${breadcrumbObj.breadcrumb.breadcrumbList}">
+    <span><a href="${breadcrumb.pageLink}.html" data-sly-unwrap="${breadcrumbList.last}" target="_blank"> ${breadcrumb.title}</a>
+         <sly data-sly-test="${!breadcrumbList.last}"> > </sly></span>
+
+</div>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = breadcrumbObj.breadcrumb.breadcrumbList.size == 0}"></sly>

@@ -642,6 +642,22 @@ Bundle-DocURL:
                 <classifier>apis</classifier>
                 <scope>provided</scope>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.16</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations -->
+            <dependency>
+                <groupId>org.jetbrains</groupId>
+                <artifactId>annotations</artifactId>
+                <version>20.1.0</version>
+            </dependency>
+
             <!-- Apache Sling Dependencies -->
             <dependency>
                 <groupId>org.apache.sling</groupId>
@@ -703,23 +719,43 @@ Bundle-DocURL:
 
 
             <!-- Testing -->
-            <dependency>
+           <!-- <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
                 <version>5.6.2</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>-->
+
+
+            <!-- https://mvnrepository.com/artifact/org.junit/junit-bom -->
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>5.7.0</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
                 <version>3.3.3</version>
                 <scope>test</scope>
             </dependency>
+
+            <!--<dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13.1</version>
+                <scope>test</scope>
+            </dependency>-->
+
+            <!-- https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter -->
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-junit-jupiter</artifactId>
-                <version>3.3.3</version>
+                <version>3.6.28</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -734,11 +770,17 @@ Bundle-DocURL:
                 <version>3.0.2</version>
                 <scope>test</scope>
             </dependency>
-            <dependency>
+            <!--<dependency>
                 <groupId>uk.org.lidalia</groupId>
                 <artifactId>slf4j-test</artifactId>
                 <version>1.0.1</version>
                 <scope>test</scope>
+            </dependency>-->
+            <!-- https://mvnrepository.com/artifact/org.apache.sling/org.apache.sling.query -->
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.query</artifactId>
+                <version>4.0.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
