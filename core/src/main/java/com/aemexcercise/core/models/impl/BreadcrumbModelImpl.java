@@ -59,6 +59,7 @@ public class BreadcrumbModelImpl implements BreadcrumbModel {
         try {
             resourceResolver = AppUtils.getServiceUserResourceResolver(resourceResolverFactory, MetadataConstants.METADATA_READER_SERVICE);
             PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
+            assert pageManager != null;
             currentPage = pageManager.getContainingPage(currentResource);
 
             int currentDepth = currentPage.getDepth();

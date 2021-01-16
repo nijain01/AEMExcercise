@@ -40,7 +40,7 @@ import static com.day.cq.wcm.api.NameConstants.NT_PAGE;
 public class TaggedPageModelImpl implements TaggedPageModel {
 
     protected static final String RESOURCE_TYPE = "aemexcercise/components/tagpicker";
-    private static final String PATH_TO_SEARCH = "/content";
+    private static final String PATH_TO_SEARCH = "/";
     private static final String LIMIT = "p.limit";
     private static final String TITLE_PATH = "jcr:content/jcr:title";
     private final Logger log = LoggerFactory.getLogger(getClass());
